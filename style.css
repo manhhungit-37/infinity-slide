@@ -1,0 +1,63 @@
+.container-slides {
+  margin:auto;
+  max-width:700px;
+  position:relative;    
+}
+/* Tạo kiểu cho thẻ img */
+img {
+  width:100%;
+  max-height:450px;    
+}
+/* Ẩn các slide mặc định ban đầu */
+.container-slides .slides {
+  display:none;    
+}
+/* Bố cục số thứ tự hình ảnh */
+.container-slides .number {
+  position:absolute;
+  top:0;
+  left:0;
+  padding:20px;    
+}
+/* Tạo kiểu cho các nút chấm tròn */
+
+.dot {
+  margin-top: 10px;
+}
+.container-slides .dotlist {
+  width:15px;
+  height:15px;
+  background-color:#999;
+  display:inline-block;
+  border-radius:50%;
+  cursor:pointer;    
+  transition:background-color 0.5s;
+  margin-top:10px;
+}
+/* Nút chấm tròn khi hover */
+.container-slides .dotlist:hover {
+  background-color:#ccc;    
+}
+/* Nút chấm tròn khi antive */
+.container-slides .dotlist.active {
+  background-color:black;    
+}
+/* Thêm lớp hiệu ứng animation khi chuyển tiếp hình ảnh */
+.container-slides .fade {
+  animation:fade 1.5s;    
+}
+@keyframes fade {
+  from {opacity:0.4;}
+  to {opacity:1;}    
+}
+/* Thêm truy vấn phương tiện khi màn hình nhỏ hơn 700px */
+@media screen and (max-width:700px) {
+  .container-slides {
+      margin-top:30px;
+      max-width:400px;    
+  }
+  .container-slides img {
+      width:100%;
+      height:200px;
+  }
+}
